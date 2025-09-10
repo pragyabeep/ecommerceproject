@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful - ShopEasy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .success-page { max-width: 700px; margin: 120px auto 40px; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); text-align: center; }
+        .success-page i { font-size: 4rem; color: #10b981; margin-bottom: 1rem; }
+        .success-actions { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+        .btn { padding: 0.875rem 1.5rem; border-radius: 8px; font-weight: 600; border: none; cursor: pointer; }
+        .btn-primary { background: #2563eb; color: #fff; }
+        .btn-secondary { background: transparent; color: #2563eb; border: 2px solid #2563eb; }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const sessionId = params.get('session_id');
+            // Clear cart locally after success
+            localStorage.removeItem('cart');
+        });
+    </script>
+    </head>
+<body>
+    <div class="success-page">
+        <i class="fas fa-check-circle"></i>
+        <h1>Payment Successful</h1>
+        <p>Thank you for your purchase! A confirmation has been sent to your email.</p>
+        <div class="success-actions">
+            <button class="btn btn-primary" onclick="window.location.href='index.html'">Continue Shopping</button>
+            <button class="btn btn-secondary" onclick="window.location.href='admin.html'">View Orders (Admin)</button>
+        </div>
+    </div>
+</body>
+</html>
+
+

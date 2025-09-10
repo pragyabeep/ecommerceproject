@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Cancelled - ShopEasy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .cancel-page { max-width: 700px; margin: 120px auto 40px; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); text-align: center; }
+        .cancel-page i { font-size: 4rem; color: #ef4444; margin-bottom: 1rem; }
+        .cancel-actions { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+        .btn { padding: 0.875rem 1.5rem; border-radius: 8px; font-weight: 600; border: none; cursor: pointer; }
+        .btn-primary { background: #2563eb; color: #fff; }
+        .btn-secondary { background: transparent; color: #2563eb; border: 2px solid #2563eb; }
+    </style>
+</head>
+<body>
+    <div class="cancel-page">
+        <i class="fas fa-times-circle"></i>
+        <h1>Payment Cancelled</h1>
+        <p>Your payment was cancelled. You can return to checkout or continue shopping.</p>
+        <div class="cancel-actions">
+            <button class="btn btn-primary" onclick="window.location.href='checkout.html'">Return to Checkout</button>
+            <button class="btn btn-secondary" onclick="window.location.href='products.html'">Continue Shopping</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
